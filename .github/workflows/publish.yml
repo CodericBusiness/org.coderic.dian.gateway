@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: Publish site
 
 on:
   push:
@@ -15,7 +15,7 @@ on:
     branches: [ "master" ]
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 permissions:
   contents: read
   pages: write
