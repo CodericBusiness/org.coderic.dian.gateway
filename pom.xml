@@ -19,6 +19,7 @@
 		<name>Coderic</name>
 		<url>https://coderic.org/</url>
 	</organization>
+	<inceptionYear>2024</inceptionYear>
 	<licenses>
 		<license>
 			<name>The GNU GPL3 license</name>
@@ -32,6 +33,10 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/CodericBusiness/BankGateway.git</url>
 	</scm>
+	<ciManagement>
+		<system>GitHub Actions</system>
+		<url>https://github.com/CodericBusiness/BankGateway/actions</url>
+	</ciManagement>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/CodericBusiness/BankGateway/issues</url>
@@ -51,8 +56,6 @@
 	</developers>
 	<properties>
 		<java.version>21</java.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
@@ -67,6 +70,32 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-security</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-javadoc</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-data-rest</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path</artifactId>
 			<version>2.9.0</version>
@@ -79,6 +108,14 @@
 	</dependencies>
 	<build>
 		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
