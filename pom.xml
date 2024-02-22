@@ -14,7 +14,7 @@
 	<packaging>war</packaging>
 	<name>Gateway for Bank Transactions</name>
 	<description>Bank Transactions Gateway</description>
-	<url>https://github.com/CodericBusiness/BankGateway</url>
+	<url>https://github.com/CodericBusiness/org.coderic.bank.gateway</url>
 	<organization>
 		<name>Coderic</name>
 		<url>https://coderic.org/</url>
@@ -28,18 +28,18 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:https://github.com/CodericBusiness/BankGateway.git</connection>
+		<connection>scm:git:https://github.com/CodericBusiness/org.coderic.bank.gateway.git</connection>
 		<developerConnection>${project.scm.connection}</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/CodericBusiness/BankGateway.git</url>
+		<url>https://github.com/CodericBusiness/org.coderic.bank.gateway.git</url>
 	</scm>
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/CodericBusiness/BankGateway/actions</url>
+		<url>https://github.com/CodericBusiness/org.coderic.bank.gateway/actions</url>
 	</ciManagement>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/CodericBusiness/BankGateway/issues</url>
+		<url>https://github.com/CodericBusiness/org.coderic.bank.gateway/issues</url>
 	</issueManagement>
 	<developers>
 		<developer>
