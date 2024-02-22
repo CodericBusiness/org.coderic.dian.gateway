@@ -14,8 +14,12 @@ on:
   pull_request:
     branches: [ "master" ]
 concurrency:
-  group: maven
+  group: github-pages
   cancel-in-progress: true
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,6 +31,14 @@ jobs:
         java-version: 21
         distribution: 'temurin'
         cache: maven
-    - name: Test with Maven
-      run: mvn clean test --file pom.xml
-
+    - name: Deploy site
+      run: mvn clean site --file pom.xml
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+    - name: Upload Artifacts
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./target/site
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
