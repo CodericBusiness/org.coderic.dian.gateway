@@ -6,16 +6,55 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
-	<groupId>net.coderic.bank</groupId>
+	<groupId>org.coderic.bank</groupId>
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>gateway</name>
+	<name>Gateway for Bank Transactions</name>
 	<description>Bank Transactions Gateway</description>
+	<url>https://github.com/CodericBusiness/BankGateway</url>
+	<organization>
+		<name>Coderic</name>
+		<url>https://coderic.org/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>The GNU GPL3 license</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<scm>
+		<connection>scm:git:https://github.com/CodericBusiness/BankGateway.git</connection>
+		<developerConnection>${project.scm.connection}</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/CodericBusiness/BankGateway.git</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/CodericBusiness/BankGateway/issues</url>
+	</issueManagement>
+	<developers>
+		<developer>
+			<id>neftaliyagua</id>
+			<name>Neftali Yagua</name>
+			<email>neftaliyagua@fedoraproject.org</email>
+			<organization>Coderic</organization>
+			<organizationUrl>https://coderic.org</organizationUrl>
+			<roles>
+				<role>PMC Chair</role>
+			</roles>
+			<timezone>America/Caracas</timezone>
+		</developer>
+	</developers>
 	<properties>
 		<java.version>21</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,7 +77,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -47,5 +85,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
