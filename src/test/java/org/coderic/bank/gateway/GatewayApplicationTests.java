@@ -1,4 +1,4 @@
-package net.coderic.bank.gateway;
+package org.coderic.bank.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,5 +9,4 @@ class GatewayApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
