@@ -22,12 +22,12 @@ name="REST API gateway.">
 	<bannerLeft>
 		<name>Gateway for Bank Transactions</name>
 		<!--src>/images/logox1.png</src-->
-		<href>https://coderic.org/</href>
+		<!--href>https://coderic.org/</href-->
 	</bannerLeft>
 	<edit>${project.scm.url}/edit/master/</edit>
-	<!--poweredBy>
+	<poweredBy>
 		<logo name="Coderic" href="https://coderic.org/" img="/images/logo.png" position="center" width="80%" title="Coderic" />
-	</poweredBy-->
+	</poweredBy>
 	<body>
 		<breadcrumbs>
 			<item name="Gateway" href="/index.html"/>
