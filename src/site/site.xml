@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/DECORATION/1.6.0"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd"
-name="REST API gateway.">
+name="${project.name}">
 	<skin>
 		<groupId>org.apache.maven.skins</groupId>
 		<artifactId>maven-fluido-skin</artifactId>
@@ -20,7 +20,7 @@ name="REST API gateway.">
 		</fluidoSkin>
 	</custom>
 	<bannerLeft>
-		<name>Gateway for Bank Transactions</name>
+		<name>${project.name}</name>
 		<!--src>/images/logox1.png</src-->
 		<!--href>https://coderic.org/</href-->
 	</bannerLeft>
