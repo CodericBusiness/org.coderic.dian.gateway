@@ -33,12 +33,10 @@ name="REST API gateway.">
 			<item name="Gateway" href="/index.html"/>
 		</breadcrumbs>
 		<links>
-			<item name="Documentación" href="/documentacion.pdf" />
-			<item name="Descargas" href="/descargas.html" />
 			<item name="Repositorio" href="${project.scm.url}" />
 		</links>
-		<menu name="Enlaces de interés">
-			<item name="Versionado semántico" href="https://semver.org/lang/es/" />
+		<menu name="Related links">
+			<item name="Semantic Versioning" href="https://semver.org/lang/es/" />
 			<item name="Spring Boot" href="https://spring.io/" />
 			<item name="Maven" href="https://maven.apache.org/" />
 			<item name="Java" href="https://www.javainuse.com/" />
