@@ -1,4 +1,4 @@
-package net.coderic.bank.gateway;
+package org.coderic.bank.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
