@@ -20,7 +20,7 @@ name="REST API gateway.">
 		</fluidoSkin>
 	</custom>
 	<bannerLeft>
-		<name>Rest API gateway</name>
+		<name>Gateway for Bank Transactions</name>
 		<!--src>/images/logox1.png</src-->
 		<href>https://coderic.org/</href>
 	</bannerLeft>
