@@ -1,0 +1,10 @@
+Created-By: Apache Maven
+Main-Class: org.coderic.bank.gateway.GatewayApplication
+Manifest-Version: 2.0
+Name: coderic-bank/gateway
+Specification-Title: Gateway for Bank Transactions
+Specification-Version: 1.0
+Specification-Vendor: Coderic
+Implementation-Title: coderic.gateway
+Implementation-Vendor: Coderic
+

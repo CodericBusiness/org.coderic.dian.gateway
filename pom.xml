@@ -66,13 +66,18 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
@@ -110,6 +115,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>${project.artifactId}##${project.version}</finalName>
 		<plugins>
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -122,6 +128,27 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.sun.xml.ws</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<packageName>org.coderic.bank.wsdl</packageName>
+					<wsdlUrls>
+						<wsdlUrl>http://localhost:8080/endpoint/ws/countries.wsdl</wsdlUrl>
+					</wsdlUrls>
+					<sourceDestDir>${sourcesDir}</sourceDestDir>
+					<destDir>${classesDir}</destDir>
+					<extension>true</extension>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -147,6 +174,20 @@
 				<version>2.12.1</version>
 				<configuration>
 					<includeOpenIssues>true</includeOpenIssues>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<server>TomcatServer</server>
+					<url>http://localhost:8080/manager/text</url>
+					<update>true</update>
+					<path>/${project.build.finalName}</path>
+					<ignorePackaging>true</ignorePackaging>
+					<tag>${project.version}</tag>
+					<mode>war</mode>
 				</configuration>
 			</plugin>
 		</plugins>
