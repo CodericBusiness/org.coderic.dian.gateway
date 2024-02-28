@@ -143,7 +143,7 @@
 				<configuration>
 					<packageName>org.coderic.bank.wsdl</packageName>
 					<wsdlUrls>
-						<wsdlUrl>http://localhost:8080/endpoint/ws/countries.wsdl</wsdlUrl>
+						<wsdlUrl>https://localhost:8080/endpoint/ws/countries.wsdl</wsdlUrl>
 					</wsdlUrls>
 					<sourceDestDir>${sourcesDir}</sourceDestDir>
 					<destDir>${classesDir}</destDir>
