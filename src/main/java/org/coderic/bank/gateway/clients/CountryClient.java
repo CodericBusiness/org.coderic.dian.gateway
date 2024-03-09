@@ -19,7 +19,7 @@ public class CountryClient extends WebServiceGatewaySupport {
         log.info("Requesting location for " + country);
 
         GetCountryResponse response = (GetCountryResponse) getWebServiceTemplate()
-                .marshalSendAndReceive("https://staging.coderic.org:8443/endpoint/ws/countries", request,
+                .marshalSendAndReceive("https://staging.coderic.org:8443/bank/endpoint/ws/countries", request,
                         new SoapActionCallback(
                                 "http://coderic.org/bank/ws/GetCountryRequest"));
 
