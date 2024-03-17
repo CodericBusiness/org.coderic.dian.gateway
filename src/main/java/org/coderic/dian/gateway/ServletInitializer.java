@@ -1,4 +1,4 @@
-package org.coderic.bank.gateway;
+package org.coderic.dian.gateway;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,5 +1,5 @@
 Created-By: Apache Maven
-Main-Class: org.coderic.bank.gateway.GatewayApplication
+Main-Class: org.coderic.dian.gateway.GatewayApplication
 Manifest-Version: 2.0
 Name: coderic-bank/gateway
 Specification-Title: Gateway for Bank Transactions

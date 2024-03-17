@@ -1,4 +1,4 @@
-package org.coderic.bank.gateway;
+package org.coderic.dian.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

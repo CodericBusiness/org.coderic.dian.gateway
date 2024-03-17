@@ -8,13 +8,13 @@
 		<version>3.2.3</version>
 		<relativePath/>
 	</parent>
-	<groupId>org.coderic.bank</groupId>
+	<groupId>org.coderic.dian</groupId>
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Gateway for Bank Transactions</name>
 	<description>Bank Transactions Gateway</description>
-	<url>https://github.com/CodericBusiness/org.coderic.bank.gateway</url>
+	<url>https://github.com/CodericBusiness/org.coderic.dian.gateway</url>
 	<organization>
 		<name>Coderic</name>
 		<url>https://coderic.org/</url>
@@ -28,18 +28,18 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:https://github.com/CodericBusiness/org.coderic.bank.gateway.git</connection>
+		<connection>scm:git:https://github.com/CodericBusiness/org.coderic.dian.gateway.git</connection>
 		<developerConnection>${project.scm.connection}</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/CodericBusiness/org.coderic.bank.gateway.git</url>
+		<url>https://github.com/CodericBusiness/org.coderic.dian.gateway.git</url>
 	</scm>
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/CodericBusiness/org.coderic.bank.gateway/actions</url>
+		<url>https://github.com/CodericBusiness/org.coderic.dian.gateway/actions</url>
 	</ciManagement>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/CodericBusiness/org.coderic.bank.gateway/issues</url>
+		<url>https://github.com/CodericBusiness/org.coderic.dian.gateway/issues</url>
 	</issueManagement>
 	<developers>
 		<developer>
@@ -113,6 +113,16 @@
 			<artifactId>json-path</artifactId>
 			<version>2.9.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.coderic.ws</groupId>
+			<artifactId>dian</artifactId>
+			<version>0.0.1</version>
+		  </dependency>
+		<dependency>
+			<groupId>com.googlecode.xades4j</groupId>
+			<artifactId>xades4j</artifactId>
+			<version>2.2.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}##${project.version}</finalName>
@@ -128,27 +138,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>com.sun.xml.ws</groupId>
-				<artifactId>jaxws-maven-plugin</artifactId>
-				<version>4.0.2</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>wsimport</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<packageName>org.coderic.bank.wsdl</packageName>
-					<wsdlUrls>
-						<wsdlUrl>https://staging.coderic.org:8443/bank/endpoint/ws/countries.wsdl</wsdlUrl>
-					</wsdlUrls>
-					<sourceDestDir>${sourcesDir}</sourceDestDir>
-					<destDir>${classesDir}</destDir>
-					<extension>true</extension>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

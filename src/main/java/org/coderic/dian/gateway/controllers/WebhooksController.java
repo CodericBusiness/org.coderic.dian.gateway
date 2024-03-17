@@ -1,4 +1,4 @@
-package org.coderic.bank.gateway.controllers;
+package org.coderic.dian.gateway.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

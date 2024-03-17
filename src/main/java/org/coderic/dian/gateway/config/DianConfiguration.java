@@ -1,26 +1,27 @@
-package org.coderic.bank.gateway.config;
+package org.coderic.dian.gateway.config;
 
-import org.coderic.bank.gateway.clients.CountryClient;
+import org.coderic.dian.gateway.clients.DianClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 @Configuration
-public class CountryConfiguration {
+public class DianConfiguration {
 
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("org.coderic.bank.wsdl");
+        marshaller.setContextPath("org.coderic.ws.dian.wsdl");
         return marshaller;
     }
 
     @Bean
-    public CountryClient countryClient(Jaxb2Marshaller marshaller) {
-        CountryClient client = new CountryClient();
-        //client.setDefaultUri("https://staging.coderic.org:8443/bank/endpoint/ws");
+    public DianClient dianClient(Jaxb2Marshaller marshaller) {
+        DianClient client = new DianClient();
+        client.setDefaultUri("https://vpfe-hab.dian.gov.co/WcfDianCustomerServices.svc");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;
     }
+    
 }

@@ -1,4 +1,4 @@
-package org.coderic.bank.gateway.config;
+package org.coderic.dian.gateway.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

@@ -13,7 +13,7 @@ name="${project.name}">
 			<!--profile>(pre-release|sandbox|retired)</profile-->
 			<sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
 			<gitHub>
-				<projectId>CodericBusiness/org.coderic.bank.gateway</projectId>
+				<projectId>CodericBusiness/org.coderic.dian.gateway</projectId>
 				<ribbonOrientation>right</ribbonOrientation>
 				<ribbonColor>orange</ribbonColor>
 			</gitHub>
